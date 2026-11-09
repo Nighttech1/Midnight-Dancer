@@ -1,0 +1,56 @@
+{
+  "assumptions": {
+    "currency": "RUB",
+    "status": "scenario_not_forecast",
+    "price": 1490,
+    "storeFee": 0.15,
+    "refundReserve": 0.05,
+    "variableSupportPerSale": 50,
+    "fixedCashBudget": 30000,
+    "taxRate": null,
+    "ownerTimeCost": null
+  },
+  "scenarios": [
+    {
+      "name": "low",
+      "teachers": 10,
+      "learnersEach": 15,
+      "activationRate": 0.4,
+      "payerRate": 0.05,
+      "reached": 150,
+      "active": 60,
+      "expectedPayers": 3,
+      "grossSales": 4470,
+      "contributionBeforeTaxAndFixed": 3426,
+      "afterScenarioCashBudgetBeforeTaxAndOwnerTime": -26574
+    },
+    {
+      "name": "base",
+      "teachers": 30,
+      "learnersEach": 20,
+      "activationRate": 0.5,
+      "payerRate": 0.1,
+      "reached": 600,
+      "active": 300,
+      "expectedPayers": 30,
+      "grossSales": 44700,
+      "contributionBeforeTaxAndFixed": 34260,
+      "afterScenarioCashBudgetBeforeTaxAndOwnerTime": 4260
+    },
+    {
+      "name": "high",
+      "teachers": 60,
+      "learnersEach": 25,
+      "activationRate": 0.6,
+      "payerRate": 0.15,
+      "reached": 1500,
+      "active": 900,
+      "expectedPayers": 135,
+      "grossSales": 201150,
+      "contributionBeforeTaxAndFixed": 154170,
+      "afterScenarioCashBudgetBeforeTaxAndOwnerTime": 124170
+    }
+  ],
+  "unitContributionBeforeTaxAndFixed": 1142,
+  "breakEvenSalesBeforeTaxAndOwnerTime": 27
+}
