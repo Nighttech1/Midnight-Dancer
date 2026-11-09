@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "product": "Midnight Dancer",
+  "updated": "2026-11-09",
+  "entrypoint": "team/START-DIRECTOR.md",
+  "default_branch": "main",
+  "execution": {
+    "mode": "on-demand",
+    "native_subagents": "discover-at-runtime",
+    "fallback": "sequential-roles-disclosed",
+    "background_workers_installed": false,
+    "external_actions_require_owner_authorization": true
+  },
+  "roles": [
+    {
+      "id": "product-director",
+      "title": "Директор продукта",
+      "manager": null,
+      "path": "team/roles/product-director.md",
+      "skills": [
+        "team/skills/direct-product/SKILL.md",
+        "team/skills/review-evidence/SKILL.md"
+      ],
+      "trigger": "Стратегия продукта, запуск, межфункциональные решения, приоритеты и восстановление работы нового чата.",
+      "direct_reports": [
+        "cmo",
+        "cfo",
+        "product-manager",
+        "product-analyst",
+        "ai-bridge",
+        "quality-reviewer",
+        "technical-lead"
+      ],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "cmo",
+      "title": "Директор по маркетингу",
+      "manager": "product-director",
+      "path": "team/roles/cmo.md",
+      "skills": [
+        "team/skills/plan-distribution/SKILL.md",
+        "team/skills/research-market/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Выход на рынок, позиционирование, каналы, партнёрства, ASO и маркетинговые кампании.",
+      "direct_reports": [
+        "market-researcher",
+        "partnerships-manager",
+        "aso-specialist",
+        "content-producer",
+        "performance-marketer",
+        "art-director",
+        "motion-designer"
+      ],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "cfo",
+      "title": "Финансовый директор",
+      "manager": "product-director",
+      "path": "team/roles/cfo.md",
+      "skills": [
+        "team/skills/manage-finance/SKILL.md",
+        "team/skills/review-evidence/SKILL.md"
+      ],
+      "trigger": "Бюджет, цены, расходы, экономика привлечения, прогноз выручки, денежные потоки.",
+      "direct_reports": [
+        "financial-analyst",
+        "monetization-manager"
+      ],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "product-manager",
+      "title": "Менеджер продукта",
+      "manager": "product-director",
+      "path": "team/roles/product-manager.md",
+      "skills": [
+        "team/skills/improve-retention/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Пользовательские сценарии, онбординг, удержание, обратная связь, приоритеты функций.",
+      "direct_reports": [
+        "crm-manager"
+      ],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "market-researcher",
+      "title": "Маркетинговый исследователь",
+      "manager": "cmo",
+      "path": "team/roles/market-researcher.md",
+      "skills": [
+        "team/skills/research-market/SKILL.md"
+      ],
+      "trigger": "Сегментация танцоров, конкуренты, интервью, оценка каналов и спроса.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "partnerships-manager",
+      "title": "Менеджер по партнёрствам и сообществу",
+      "manager": "cmo",
+      "path": "team/roles/partnerships-manager.md",
+      "skills": [
+        "team/skills/plan-distribution/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Школы, преподаватели, организаторы и амбассадоры; рекомендации и обмен материалами.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "aso-specialist",
+      "title": "Специалист по продвижению в магазинах приложений",
+      "manager": "cmo",
+      "path": "team/roles/aso-specialist.md",
+      "skills": [
+        "team/skills/plan-distribution/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Карточки App Store/Google Play или другого подтверждённого магазина, поиск и конверсия в установку.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "content-producer",
+      "title": "Контент-продюсер",
+      "manager": "cmo",
+      "path": "team/roles/content-producer.md",
+      "skills": [
+        "team/skills/plan-distribution/SKILL.md"
+      ],
+      "trigger": "Контент-план, демонстрации приложения, ролики, посты, коллаборации с авторами.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "performance-marketer",
+      "title": "Специалист по платному привлечению",
+      "manager": "cmo",
+      "path": "team/roles/performance-marketer.md",
+      "skills": [
+        "team/skills/plan-distribution/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Подготовка или анализ платных кампаний и рекламных креативов.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "crm-manager",
+      "title": "CRM-маркетолог",
+      "manager": "product-manager",
+      "path": "team/roles/crm-manager.md",
+      "skills": [
+        "team/skills/improve-retention/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Онбординг, возврат к тренировкам, уведомления, сообщения и реферальные сценарии.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "product-analyst",
+      "title": "Продуктовый аналитик",
+      "manager": "product-director",
+      "path": "team/roles/product-analyst.md",
+      "skills": [
+        "team/skills/measure-product/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "События, воронка, когорты, атрибуция, дашборд и оценка экспериментов.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "financial-analyst",
+      "title": "Финансовый аналитик",
+      "manager": "cfo",
+      "path": "team/roles/financial-analyst.md",
+      "skills": [
+        "team/skills/manage-finance/SKILL.md"
+      ],
+      "trigger": "Финансовая модель, план/факт, сценарии, расходы и прогноз денег.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "monetization-manager",
+      "title": "Менеджер по монетизации",
+      "manager": "cfo",
+      "path": "team/roles/monetization-manager.md",
+      "skills": [
+        "team/skills/manage-finance/SKILL.md",
+        "team/skills/design-experiment/SKILL.md"
+      ],
+      "trigger": "Цены, тарифы, подписка/разовая покупка, trial и ограничения бесплатной версии.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "ai-bridge",
+      "title": "Инженер по ИИ и интеграциям",
+      "manager": "product-director",
+      "path": "team/roles/ai-bridge.md",
+      "skills": [
+        "team/skills/connect-operations/SKILL.md"
+      ],
+      "trigger": "Промпты, API, MCP, инструменты агентов, аналитические/маркетинговые интеграции.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "quality-reviewer",
+      "title": "Специалист по качеству и проверке результатов",
+      "manager": "product-director",
+      "path": "team/roles/quality-reviewer.md",
+      "skills": [
+        "team/skills/review-evidence/SKILL.md"
+      ],
+      "trigger": "Проверка стратегии, исследования, расчётов, кампании или закрытие волны.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "technical-lead",
+      "title": "Технический руководитель",
+      "manager": "product-director",
+      "path": "team/roles/technical-lead.md",
+      "skills": [
+        "team/skills/connect-operations/SKILL.md",
+        "team/skills/review-evidence/SKILL.md"
+      ],
+      "trigger": "Проверка реализации, изменения приложения, аналитические SDK, локальная демонстрация.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "art-director",
+      "title": "Арт-директор",
+      "manager": "cmo",
+      "path": "team/roles/art-director.md",
+      "skills": [
+        "team/skills/produce-creative/SKILL.md"
+      ],
+      "trigger": "Визуальная система, скриншоты магазинов, дизайн кампании, контентные креативы.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    },
+    {
+      "id": "motion-designer",
+      "title": "Моушн-дизайнер",
+      "manager": "cmo",
+      "path": "team/roles/motion-designer.md",
+      "skills": [
+        "team/skills/produce-creative/SKILL.md"
+      ],
+      "trigger": "Демо приложения, короткие видео, анимированные скриншоты и превью.",
+      "direct_reports": [],
+      "default_write_scope": "team/runs/<task_id>/<role_id>.* (назначить явно до запуска)"
+    }
+  ]
+}
