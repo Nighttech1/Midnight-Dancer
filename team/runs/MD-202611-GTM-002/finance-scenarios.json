@@ -1,0 +1,205 @@
+{
+  "assumptions": {
+    "status": "scenario_not_forecast_or_approved_spend",
+    "period": "illustrative_4_weeks",
+    "currency": "RUB",
+    "price": 1490,
+    "effective_acquiring_rate_assumed_not_contract": 0.055,
+    "conditional_B2C_NPD_rate_no_initial_credit": 0.04,
+    "risk_reserve_rate_not_actual_refund": 0.05,
+    "variable_cash_cost_per_original_sale": 20,
+    "cash_overhead_assumed": 1500,
+    "founder_total_hours_including_code_sales_support_admin": 26,
+    "founder_hour_value_assumed": 1000,
+    "past_development_cost": null,
+    "actual_sales": null,
+    "actual_payment_provider_fee": null,
+    "actual_owner_hour_value": null,
+    "provider_approval": false
+  },
+  "formulas": {
+    "cash_no_actual_refunds": "gross - effective_fee - conditional_tax_on_gross - variable_cost - cash_overhead",
+    "prudent_result": "cash_no_actual_refunds - planning_risk_reserve",
+    "economic_result": "prudent_result - all_founder_hours * assumed_hour_value",
+    "refund_stress": "gross - actual_refund - fee_on_original_gross - tax_on_corrected_income - variable_cost_all_original_sales - overhead"
+  },
+  "unit_cash_before_fixed": 1328.45,
+  "unit_prudent_before_fixed": 1253.95,
+  "cash_break_even_with_risk_reserve_sales": 2,
+  "economic_break_even_sales": 22,
+  "sales_for_10000_economic_result": 30,
+  "scenarios": [
+    {
+      "sales": 1,
+      "gross": 1490.0,
+      "fee": 81.95,
+      "conditional_tax": 59.6,
+      "variable_cost": 20.0,
+      "cash_result_after_tax_reserve_and_overhead": -171.55,
+      "risk_reserve_not_cash_outflow": 74.5,
+      "prudent_result": -246.05,
+      "economic_result": -26246.05
+    },
+    {
+      "sales": 5,
+      "gross": 7450.0,
+      "fee": 409.75,
+      "conditional_tax": 298.0,
+      "variable_cost": 100.0,
+      "cash_result_after_tax_reserve_and_overhead": 5142.25,
+      "risk_reserve_not_cash_outflow": 372.5,
+      "prudent_result": 4769.75,
+      "economic_result": -21230.25
+    },
+    {
+      "sales": 10,
+      "gross": 14900.0,
+      "fee": 819.5,
+      "conditional_tax": 596.0,
+      "variable_cost": 200.0,
+      "cash_result_after_tax_reserve_and_overhead": 11784.5,
+      "risk_reserve_not_cash_outflow": 745.0,
+      "prudent_result": 11039.5,
+      "economic_result": -14960.5
+    },
+    {
+      "sales": 30,
+      "gross": 44700.0,
+      "fee": 2458.5,
+      "conditional_tax": 1788.0,
+      "variable_cost": 600.0,
+      "cash_result_after_tax_reserve_and_overhead": 38353.5,
+      "risk_reserve_not_cash_outflow": 2235.0,
+      "prudent_result": 36118.5,
+      "economic_result": 10118.5
+    },
+    {
+      "sales": 50,
+      "gross": 74500.0,
+      "fee": 4097.5,
+      "conditional_tax": 2980.0,
+      "variable_cost": 1000.0,
+      "cash_result_after_tax_reserve_and_overhead": 64922.5,
+      "risk_reserve_not_cash_outflow": 3725.0,
+      "prudent_result": 61197.5,
+      "economic_result": 35197.5
+    }
+  ],
+  "refund_stress": {
+    "original_sales": 10,
+    "actual_refunds": 1,
+    "cash_after_tax_and_overhead": 10354.1,
+    "economic_after_owner_time": -15645.9,
+    "additional_risk_reserve": false,
+    "note": "Assumes full refund correctly reflected for NPD; fee retained on original charge; contract may differ."
+  },
+  "sensitivity": [
+    {
+      "effective_fee": 0.039,
+      "hour_value": 0,
+      "economic_break_even_sales": 2
+    },
+    {
+      "effective_fee": 0.039,
+      "hour_value": 500,
+      "economic_break_even_sales": 12
+    },
+    {
+      "effective_fee": 0.039,
+      "hour_value": 1000,
+      "economic_break_even_sales": 22
+    },
+    {
+      "effective_fee": 0.039,
+      "hour_value": 1500,
+      "economic_break_even_sales": 32
+    },
+    {
+      "effective_fee": 0.0427,
+      "hour_value": 0,
+      "economic_break_even_sales": 2
+    },
+    {
+      "effective_fee": 0.0427,
+      "hour_value": 500,
+      "economic_break_even_sales": 12
+    },
+    {
+      "effective_fee": 0.0427,
+      "hour_value": 1000,
+      "economic_break_even_sales": 22
+    },
+    {
+      "effective_fee": 0.0427,
+      "hour_value": 1500,
+      "economic_break_even_sales": 32
+    },
+    {
+      "effective_fee": 0.055,
+      "hour_value": 0,
+      "economic_break_even_sales": 2
+    },
+    {
+      "effective_fee": 0.055,
+      "hour_value": 500,
+      "economic_break_even_sales": 12
+    },
+    {
+      "effective_fee": 0.055,
+      "hour_value": 1000,
+      "economic_break_even_sales": 22
+    },
+    {
+      "effective_fee": 0.055,
+      "hour_value": 1500,
+      "economic_break_even_sales": 33
+    },
+    {
+      "effective_fee": 0.08,
+      "hour_value": 0,
+      "economic_break_even_sales": 2
+    },
+    {
+      "effective_fee": 0.08,
+      "hour_value": 500,
+      "economic_break_even_sales": 12
+    },
+    {
+      "effective_fee": 0.08,
+      "hour_value": 1000,
+      "economic_break_even_sales": 23
+    },
+    {
+      "effective_fee": 0.08,
+      "hour_value": 1500,
+      "economic_break_even_sales": 34
+    }
+  ],
+  "daily_time_budget_minutes": [
+    60,
+    90
+  ],
+  "fortnight_schedule_minutes": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    30,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    30
+  ],
+  "notes": [
+    "Tax eligibility, contract fee, cash overhead and costs remain unverified for this seller.",
+    "NPD commission is not deducted from tax income. The 5% risk reserve is not an actual refund or expense payment.",
+    "Warm organic acquisition cash cost is not evidence of scalable CAC. Owner hours are valued separately.",
+    "Contract fee is not asserted to equal the modeled 5.5%.",
+    "Four-week schedule totals26h; no result assumes more owner time than the plan allows."
+  ]
+}
