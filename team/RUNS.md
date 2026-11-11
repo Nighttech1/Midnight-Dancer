@@ -7,4 +7,6 @@
 | MD-202611-GTM-001 | Рынок, боли, монетизация и 90-дневный запуск из РФ | delivered-awaiting-acceptance; документальная QA PASS | [Стратегия](runs/MD-202611-GTM-001/REPORT.md) |
 | MD-202611-GTM-002 | GTM v2: самозанятый,60–90 мин/день, первые оплаты/прибыль | delivered-awaiting-acceptance; документальная QA PASS | [Отчёт](runs/MD-202611-GTM-002/REPORT.md) |
 
+| MD-202611-REHEARSAL-001 | Конкуренты и ТЗ Pro: отработка участка / проходы / отдых | delivered-awaiting-acceptance; документальная QA PASS; реализация blocked до кода | [ТЗ](runs/MD-202611-REHEARSAL-001/SPEC.md) / [Отчёт](runs/MD-202611-REHEARSAL-001/REPORT.md) |
+
 Новые волны добавляет директор-интегратор. Статусы и приёмку не переписывать задним числом без источника решения владельца.
